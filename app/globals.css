@@ -1285,3 +1285,16 @@ body{font-size:16px;line-height:1.5}.heroGrid>div>p,.sectionHead>p,.trainerHead>
     min-width:88%!important;
   }
 }
+
+/* NEXORA brand: preserve the supplied artwork proportions in every placement. */
+.header .logoWrap img{width:clamp(150px,13vw,210px)!important;height:auto!important;max-height:76px;object-fit:contain;filter:none!important;}
+.header .logoWrap{flex-shrink:0;}
+.footerLogo img{width:min(300px,100%);height:auto;object-fit:contain;filter:none;}
+.nexoraLoaderLogo{display:block;width:min(620px,84vw);height:auto;object-fit:contain;animation:nexoraGlow 1.8s ease-in-out infinite;}
+.nexoraLoaderProgress{width:min(240px,58vw);height:3px;margin-top:30px;background:#ffffff24;overflow:hidden;border-radius:3px;}
+.nexoraLoaderProgress i{display:block;width:45%;height:100%;background:#e8bb65;animation:nexoraProgress 1.4s ease-in-out infinite;}
+.gymLoader p{font-family:Arial,sans-serif;font-size:12px;letter-spacing:.24em;color:#e8bb65;}
+@keyframes nexoraGlow{50%{filter:drop-shadow(0 0 12px #dfaf4940);}}
+@keyframes nexoraProgress{from{transform:translateX(-110%);}to{transform:translateX(330%);}}
+@media(max-width:767px){.header .logoWrap img{width:148px!important;max-height:56px;}.footerLogo img{width:min(280px,100%);}}
+@media(prefers-reduced-motion:reduce){.nexoraLoaderLogo,.nexoraLoaderProgress i{animation:none;}.nexoraLoaderProgress i{width:100%;}}
